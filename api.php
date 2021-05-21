@@ -21,8 +21,10 @@ if ($conn->connect_error) {
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-          echo "Numero Secuencia: " . $row["numSecuencia"]. " - fecha Hora: " . $row["fechaHora"]. " idDispositivo " . $row["idDispositivo"]. " latitud ".$row["latitud"]. " longitud ".$row["longitud"]. " confianza ".$row["confianza"]. " idUsuario ".$row["idUsuario"]."<br>";
+          //echo "Numero Secuencia: " . $row["numSecuencia"]. " - fecha Hora: " . $row["fechaHora"]. " idDispositivo " . $row["idDispositivo"]. " latitud ".$row["latitud"]. " longitud ".$row["longitud"]. " confianza ".$row["confianza"]. " idUsuario ".$row["idUsuario"]."<br>";
+          $emparray[] = $row;
         }
+        echo json_encode($emparray);
       } else {
         echo "0 results";
       }
