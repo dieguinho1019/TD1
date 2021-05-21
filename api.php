@@ -1,34 +1,20 @@
 <?php
+$mysqli = new mysqli("localhost","my_user","my_password","my_db");
 
-$servername = "localhost";
-$username = "diego";
-$password = "TesisDiego123";
-$dbname = "dbSigfox";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-die("Connection failed: " . $conn->connect_error);
+if ($mysqli -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  exit();
 }
-else
-{
-    echo "Connected successfully 2";
 
+$sql = "SELECT Lastname, Age FROM Persons ORDER BY Lastname";
+$result -> $mysqli -> query($sql);
 
-    $sql = "SELECT * FROM dbSigfox.tblMensajes;";
-    $result -> $conn -> query($sql);
-    
-    $result -> fetch_all(MYSQLI_ASSOC);
+// Fetch all
+$result -> fetch_all(MYSQLI_ASSOC);
 
-    var_dump($result);
-    echo($result);
+// Free result set
+$result -> free_result();
 
-    $stmt->close();
-    $conn->close();
-
-    echo "Query  2";
-} 
-
+$mysqli -> close();
+echo "Query success";
 ?>
