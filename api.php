@@ -21,7 +21,7 @@ if ($conn->connect_error) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
           //echo "Numero Secuencia: " . $row["numSecuencia"]. " - fecha Hora: " . $row["fechaHora"]. " idDispositivo " . $row["idDispositivo"]. " latitud ".$row["latitud"]. " longitud ".$row["longitud"]. " confianza ".$row["confianza"]. " idUsuario ".$row["idUsuario"]."<br>";
-          $emparray[] = $row;
+          $emparray[$row["numSecuencia"]] = $row;
         }
         echo json_encode($emparray);
       } else {
