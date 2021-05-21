@@ -1,5 +1,5 @@
 <?php
-
+header('Content-type: application/json');
 $servername = "localhost";
 $username = "diego";
 $password = "TesisDiego123";
