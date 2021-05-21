@@ -1,12 +1,12 @@
 <?php
-$mysqli = new mysqli("localhost","my_user","my_password","my_db");
+$mysqli = new mysqli("localhost","diego","TesisDiego123","dbSigfox");
 
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
   exit();
 }
 
-$sql = "SELECT Lastname, Age FROM Persons ORDER BY Lastname";
+$sql = "SELECT * FROM tblMensajes";
 $result -> $mysqli -> query($sql);
 
 // Fetch all
