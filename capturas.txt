@@ -1,0 +1,4 @@
+Nueva lectura de id es: 418740
+Nueva lectura de data es: 2cc2fabd99ee9cc2880601
+Nueva lectura de time es: 1617994236
+Nueva lectura de seqNumber es: 243
