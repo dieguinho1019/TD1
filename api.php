@@ -20,8 +20,9 @@ else
     $sql = "SELECT * FROM dbSigfox.tblMensajes;";
     $result -> $mysqli -> query($sql);
     
-    mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $result -> fetch_all(MYSQLI_ASSOC);
 
+    var_dump($result);
     echo($result);
 
     $stmt->close();
