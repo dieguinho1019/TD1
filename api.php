@@ -14,9 +14,7 @@ die("Connection failed: " . $conn->connect_error);
 }
 else
 {
-    echo "Connected successfully2";
-    
-    
+    echo "Connected successfully";
 
     $stmt->close();
     $conn->close();
