@@ -18,7 +18,7 @@ else
 
 
     $sql = "SELECT * FROM dbSigfox.tblMensajes;";
-    $result -> $mysqli -> query($sql);
+    $result -> $conn -> query($sql);
     
     $result -> fetch_all(MYSQLI_ASSOC);
 
@@ -28,6 +28,7 @@ else
     $stmt->close();
     $conn->close();
 
+    echo "Query  2";
 } 
 
 ?>
