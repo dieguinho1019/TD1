@@ -129,5 +129,3 @@ function hexfloat(string $hex): float
 
     return $sign * $x * pow(2, $exp - 23);
 }
-
-?>
