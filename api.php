@@ -16,6 +16,14 @@ else
 {
     echo "Connected successfully";
 
+
+    $sql = "SELECT * FROM dbSigfox.tblMensajes;";
+    $result -> $mysqli -> query($sql);
+    
+    mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    echo($result);
+
     $stmt->close();
     $conn->close();
 
